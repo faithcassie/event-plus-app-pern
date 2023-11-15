@@ -11,4 +11,4 @@ const pool = new Pool({
   database: process.env.POSTGRES_DB,
 });
 
-module.exports = pool;
+export default pool;

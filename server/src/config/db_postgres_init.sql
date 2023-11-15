@@ -3,12 +3,14 @@ CREATE TABLE public.users
   user_id SERIAL NOT NULL,
   passwd character varying(200) NOT NULL,
   email character varying(100) NOT NULL,
+  fullname character varying(200),
+  username character varying(100),
   google_id character varying(100),
   created_at timestamp(0) with time zone DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (user_id)
 )
 
-CREATE TABLE public."resetTokens"
+CREATE TABLE public.resetTokens
 (
     id SERIAL NOT NULL,
     email character varying NOT NULL,
